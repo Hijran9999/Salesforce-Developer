@@ -15,7 +15,11 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
 - [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
 - [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
-##change directly on remote repo (by anther dev)
+- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm) 
 
--some changes
+## some shanges
+-some changes do it
+- change a dev branch
+-dev branche chanfe again, dev branch exists in remote repository . so we push.
+-if there are some changes in remote repo, and we want to get in olocla we gt
+- change some more.
