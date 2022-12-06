@@ -19,7 +19,8 @@ The `sfdx-project.json` file contains useful configuration information for your 
 ## some shanges
 -some changes do it
 - change a dev branch
-
+-dev branche chanfe again, dev branch exists in remote repository . so we push.
+-if there are some changes in remote repo, and we want to get in olocla we git pull
 
 
 
