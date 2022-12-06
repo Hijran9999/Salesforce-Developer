@@ -1,0 +1,11 @@
+Dogs h = new Dogs();
+h.Name = 'Milo';
+h.Breed = ' Jivava';
+h.Age = 6;
+system.debug(h);
+h.Description();
+Dogs h2 = new Dogs();
+h2.Name = ' Simba';
+h2.Breed = ' Shiba';
+h2.Age = 7;
+h2.Description();

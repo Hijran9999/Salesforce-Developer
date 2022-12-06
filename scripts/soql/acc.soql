@@ -1,0 +1,2 @@
+//Select id, name from Account;
+Select id, name,project_Name__c from Salesforce_project__c;

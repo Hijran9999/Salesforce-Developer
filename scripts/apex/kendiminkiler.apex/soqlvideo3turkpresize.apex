@@ -1,0 +1,1 @@
+SoqlVideooo3prezieturk.fetchOppAndAccount();
