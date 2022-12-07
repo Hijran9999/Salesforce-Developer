@@ -112,19 +112,59 @@ updateAccounts.add(acc);
 }
 if(!updateAccounts.isEmpty()){
 update updateAccounts;
+}
+}
+public static void createMultipleAccounts(integer count){
+if(count<=0){
+    return;//go back demekdi
+}
+list<account> listacc = new list<account>();
+
+
+for(integer i=0;i<count;i++){
+
+account acc = new account();
+
+acc.name = 'SpaceZ';
+acc.active__c = 'Yes';
+listacc.add(acc);
 
 
 
+}
+if(!Listacc.isEmpty()){
 
+    insert listacc;
+}
+list<contact> listcnt = new list<contact>();
+
+for(account acc : listacc){
+
+id accid = acc.id;
+for(integer i=0; i<count; i++){
+
+
+    contact c = new contact();
+    c.FirstName = 'Milet';
+    c.AccountId = accid;
+    listcnt.add(c);
+}
+
+}
+if(!listcnt.isEmpty()){
+
+    insert listcnt;
 }
 
 
 }
 
-
-
-
 }
+
+//yeni record daxil et
+// sorus bu kodun menasini
+//bulky kod elave et
+
 
 
 
