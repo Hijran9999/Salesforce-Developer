@@ -1,0 +1,3 @@
+DmlVideo1ozumedremturkprsz.createMethodcontact();
+DmlVideo1ozumedremturkprsz.createUpdateContact();
+DmlVideo1ozumedremturkprsz.updateonecon();
