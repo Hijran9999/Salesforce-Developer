@@ -5,7 +5,7 @@ trigger AccountTriggerTurkishRevision on Account (before insert,after insert,bef
         System.debug('trigger.isAfter => ' + trigger.isAfter);
         System.debug('trigger.isInsert => ' + trigger.isInsert);
         System.debug('trigger.isUpdate => ' + trigger.isUpdate);*/
-        if(trigger.isBefore && trigger.isInsert){
+        /*if(trigger.isBefore && trigger.isInsert){
             system.debug('Before durumunda bu kod calisir..');
             list<account> triggerNew = trigger.new;
             system.debug('new one ' + trigger.new);
@@ -25,7 +25,7 @@ trigger AccountTriggerTurkishRevision on Account (before insert,after insert,bef
                 system.debug(eachac.name);
                 system.debug(eachac.id);
             }
-        }
+        }*/
         
         //if(trigger.isAfter && trigger.isUpdate){
            // system.debug('After durumunda bu kod calisir..');

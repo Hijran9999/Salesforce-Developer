@@ -1,4 +1,141 @@
 trigger AccountTrigger on Account (before insert,before update, after insert,after update) {
+ 
+    
+
+
+
+    
+/*if(trigger.isBefore){
+
+    AccountTriggerhandler.updateaccountDescription(trigger.new, trigger.old, trigger.newMap,trigger.oldMap);
+}*/
+
+
+
+   /*if(trigger.isBefore){
+    system.debug('before insert');
+for(account eachac : trigger.new){
+boolean updatedesc = false;
+if(trigger.isInsert && eachac.Active__c=='Yes'){
+    eachac.Description = 'ac is active';
+   updatedesc = true;
+}
+if(trigger.isUpdate){
+id accid = eachac.id;
+account oldacc = trigger.oldMap.get(eachac.Id);
+account newacc = trigger.newMap.get(eachac.id);
+if(eachac.Active__c=='Yes' && oldacc.Active__c!=newacc.Active__c){
+eachac.Description = 'celebrtae is active ';
+system.debug('u did');
+updatedesc = true;
+
+}
+}
+    
+}
+
+
+
+   }*/
+   
+}
+   
+    /*List<account> accTriggerNew = trigger.new;
+    List<account> accTriggerOld = trigger.old;
+map<id,account> actrnewmap = trigger.newMap;
+map<id,account> actrOldmap = trigger.oldmap;
+
+if(trigger.isAfter && trigger.isUpdate){
+    set<id> accIds = actrnewmap.keySet();
+ 
+//for each loop of set of ids'.
+//idfromnew map get value
+//get value of old account map id
+
+for(id eachId : accids){
+    system.debug(eachId);
+    account newacc = actrnewmap.get(eachId);
+    system.debug('name ' + newacc.name);
+    string newwebsite = newacc.Website;
+    account oldacc = actrOldmap.get(eachId);
+    system.debug('old name is ' + oldacc.name);
+    string  oldweb = oldacc.Website;
+    if(newwebsite!= oldweb){
+        system.debug(newacc.name + ',websitei ' + newwebsite);
+    }
+}
+
+}*/
+
+
+
+
+/*if(trigger.isBefore && trigger.isInsert){//yesbut id no
+system.debug('before insert tr new is ' + accTriggerNew);//null
+system.debug('before insert tr old is ' + accTriggerOld);//null
+
+
+    system.debug('new map ' + actrnewmap);
+    system.debug('old map is ' + actrOldmap);
+}
+if(trigger.isAfter && trigger.isInsert){
+    system.debug('after insert tr new is ' + accTriggerNew);
+    system.debug('After insert tr old is ' + accTriggerOld);
+    
+    system.debug('new map ' + actrnewmap);
+    system.debug('old map is ' + actrOldmap);
+}
+if(trigger.isBefore && trigger.isUpdate){
+    system.debug('before update tr new is ' + accTriggerNew);
+    system.debug('before update tr old is ' + accTriggerOld);
+    
+    system.debug('new map ' + actrnewmap);
+    system.debug('old map is ' + actrOldmap);
+}
+if(trigger.isAfter && trigger.isUpdate){
+    system.debug('after update tr new is ' + accTriggerNew);
+    system.debug('after update tr old is ' + accTriggerOld);
+    
+    system.debug('new map ' + actrnewmap);
+    system.debug('old map is ' + actrOldmap);
+}
+
+*/
+
+
+
+
+
+
+/*if(trigger.isBefore && trigger.isInsert){
+
+
+    system.debug('after insert tr old is ' + trigger.old);
+}
+if(trigger.isAfter && trigger.isInsert){
+
+    system.debug('after insert tr old is ' + trigger.old);
+}if(trigger.isBefore && trigger.isUpdate){
+
+    system.debug('after insert tr old is ' + trigger.old);
+}*/
+
+/*if(trigger.isAfter && trigger.isUpdate){
+
+    list<account> acctrOld = trigger.old;
+    for(account oldacc : acctrOld){
+        system.debug(oldacc.id + ',  ' + ' name is  ' + oldacc.name);
+    }
+    list<account> trnew = trigger.new;
+    for(account newtracc : trnew){
+
+
+        system.debug('id is' + newtracc.id + ' name is ' + newtracc.name);
+    }
+}*/
+
+
+
   /*list<account>  Acc = trigger.new;
    if(trigger.isAfter && trigger.isInsert){
     system.debug('record in after insert ' + trigger.new);
@@ -78,8 +215,6 @@ if (Trigger.isAfter) {
 }*/
 
 
-}
-   
    
    
    

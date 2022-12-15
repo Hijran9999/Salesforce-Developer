@@ -1,5 +1,14 @@
-/*trigger LeadTrigger on Lead (before insert,after insert) {
-  if(trigger.isInsert) { 
+trigger LeadTrigger on Lead (before insert,after insert) {
+  
+ /* if(trigger.isBefore){
+LeadCreateHandler.updateCloseLostdate(trigger.new, trigger.old, trigger.newmap, trigger.Oldmap);
+
+
+
+  }*/
+  
+  
+  /*if(trigger.isInsert) { 
     system.debug('start1-----');
     system.debug('trigger.isInsert = ' + trigger.isInsert);
     system.debug('trigger.isBefore= ' + trigger.isBefore);
@@ -30,9 +39,9 @@ system.debug('lead updating .. before insert trigger. ');
 }
 
 system.debug('--end2---');
+}*/
 }
-}
-*/
+
 
 
 
