@@ -1,10 +1,10 @@
 trigger AccountTrigger4 on Account (before insert,after insert,before update,after update) {
 
-if(trigger.isBefore && trigger.isUpdate){
+/*if(trigger.isBefore && trigger.isUpdate){
 
 AccountTriggerHandlerClass2.updaterevenue(trigger.new, trigger.oldMap);
 }
-
+*/
 
 
 

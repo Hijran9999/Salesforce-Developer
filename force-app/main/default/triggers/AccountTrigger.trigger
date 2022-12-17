@@ -1,6 +1,21 @@
 trigger AccountTrigger on Account (before insert,before update, after insert,after update) {
  
-    
+   
+   /*if(trigger.isAfter && trigger.isUpdate){
+
+AccountTriggerHandler.updateBilingCity(Trigger.New, trigger.Old, Trigger.NewMap,Trigger.OldMap);
+
+
+   }*/
+
+
+
+
+
+    /* if(trigger.isAfter && trigger.isUpdate){
+
+        AccountTriggerHandler.updateVIPContacts1(Trigger.New, Trigger.Old, Trigger.NewMap,Trigger.OldMap);
+    }*/
 
 
 

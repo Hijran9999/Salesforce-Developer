@@ -2,8 +2,8 @@ trigger LeadTrigger3 on Lead (before insert,after insert, before update, after u
 
 
 
-    if(trigger.isBefore){
+    /*if(trigger.isBefore){
 
 LeadTrHandler2.checkLostReason(trigger.New, trigger.old, trigger.newMap, trigger.OldMap);
-    }
+    }*/
 }

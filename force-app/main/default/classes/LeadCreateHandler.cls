@@ -29,6 +29,7 @@ if(isUpdateDate){
            
 
                 eachlead.Created_date__c = Datetime.now();
+    
         }
 
      
@@ -44,8 +45,7 @@ if(isUpdateDate){
     eachlead.Closed_Lost_Date__c = Datetime.now();
         }
     }
-    }
-    }    
+    
     
     //if ststus =contacted
     //scontacted date today
@@ -53,4 +53,3 @@ if(isUpdateDate){
     //cretd date 
     //if ststus = closed won
     //closed won dat= now
-  
