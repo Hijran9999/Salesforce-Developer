@@ -1,6 +1,15 @@
 trigger AccountTrigger on Account (before insert,before update, after insert,after update) {
  
-   
+   /*if(trigger.isBefore && trigger.isInsert){
+
+
+    AccountHandlerClassTurkishRevision.method1(trigger.new, trigger.old, trigger.newmap, trigger.oldmap);
+   }
+   if(trigger.isAfter && trigger.isInsert){
+
+AccountHandlerClassTurkishRevision.method2(trigger.new, trigger.old, trigger.newmap, trigger.oldmap);
+
+   }*/
    /*if(trigger.isAfter && trigger.isUpdate){
 
 AccountTriggerHandler.updateBilingCity(Trigger.New, trigger.Old, Trigger.NewMap,Trigger.OldMap);
