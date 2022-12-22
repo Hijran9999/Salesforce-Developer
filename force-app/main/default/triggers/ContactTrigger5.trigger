@@ -1,7 +1,20 @@
 trigger ContactTrigger5 on Contact (before insert,after insert,before update,after update,after delete, after undelete) {
+/*
+    if(trigger.isBefore && trigger.isInsert){
+        ContacthandlerTurkishrev.contactOtherphone(trigger.new, trigger.old, trigger.newMap, trigger.OldMap);
+    }
 
-    
-    //bu islemden etkilenen tum accaountlarin idlerini toplamam lazm
+
+if(trigger.isAfter && trigger.isInsert){
+
+    ContacthandlerTurkishrev.contactOtherPhone1(trigger.new);
+}
+
+*/
+
+
+
+   /* //bu islemden etkilenen tum accaountlarin idlerini toplamam lazm
     //set idninset<id>
     set<id> idset = new set<id>();
     //contact islemi bitdikden sonra ac fildnde guncellme olcaq dml da var after olmali
@@ -49,7 +62,7 @@ idset.add(c.AccountId);
     }
     
     
-    
+    */
     
     
     

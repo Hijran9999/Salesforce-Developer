@@ -4,7 +4,7 @@ trigger ContactTrigger3 on Contact (before insert,after insert, before update, a
 //bu oslemden etkilenen tum accountlarin idlerini toplamam lazim 
 //set id icinde topla
 //bos set yapisi
-set<id> idset = new set<id>();//1-ci addim
+/*set<id> idset = new set<id>();//1-ci addim
 //contact islemi bittikden sonra bir account filedinde guncelleme olacak o yzden after olmali
 if(trigger.isAfter){
 //tum dml islemleri icin if-ler olusturuyorm
@@ -54,7 +54,7 @@ update aclist;
 }
 }
 
-
+*/
 
 
 

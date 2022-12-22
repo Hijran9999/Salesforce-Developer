@@ -10,12 +10,13 @@ SalesforceProjectTriggerHandler.createDeafultTicket1(trigger.new);
 }*/
 
 
-if(trigger.isAfter && trigger.isUpdate){
+/*if(trigger.isAfter && trigger.isUpdate){
 
 
 SalesforceObjectHandlerclasdevasgn.method1(trigger.new,trigger.newMap,trigger.oldMap);
 
-}
+}*/
+
 
 
 }
