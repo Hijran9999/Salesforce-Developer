@@ -1,4 +1,4 @@
-trigger CaseTrigger on Case (before update) {
+trigger CaseTrigger on Case (before insert, after insert,before update) {
 
 /*if(trigger.isUpdate){
 system.debug('before update trigger run');
@@ -44,10 +44,9 @@ system.debug('ne qeder record update olunub ' + Casetrigger3handler.countRecords
 
 
     CaseHandlerClassPresizeVitap.createDefaulttask(trigger.new);
-}
+}*/
 
-}
-*/
+
 /*if(trigger.isBefore && trigger.isUpdate){
 system.debug('before update trigger called');
 }

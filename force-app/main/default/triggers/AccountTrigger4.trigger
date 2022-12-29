@@ -1,10 +1,33 @@
 trigger AccountTrigger4 on Account (before insert,after insert,before update,after update) {
 
+
+
+
+
+
+
+      //1 Account create edildiğinde. ona bağlı 7 tane Contact otomatik olarak create edilsin. first name'i account name ile aynı olsun. last name i contact 1 2 3.. diye isimlendirilsin..
+     /* if (trigger.isAfter && trigger.isInsert) {
+       Acctriggerhandler.createContact(trigger.new);
+    }
+
+     // 2. Bir account update edildiğinde name değişmişse description fieldine name değişti mesajı yazdır..
+     if (trigger.isBefore && trigger.isUpdate) {
+      Acctriggerhandler.updateName(trigger.new, trigger.oldMap);
+
+        /*for (account acc : trigger.new) {
+            if (acc.name != trigger.oldMap.get(acc.id).name) {
+                acc.Description = 'Bu recordda isim degisikligi oldu..';
+            }
+        }*/
+     
+
+
 /*if(trigger.isBefore && trigger.isUpdate){
 
 AccountTriggerHandlerClass2.updaterevenue(trigger.new, trigger.oldMap);
-}
-*/
+}/*
+
 
 
 
@@ -252,6 +275,6 @@ if(trigger.isAfter && trigger.isUpdate){
       
 
 
+
+
 }
-
-

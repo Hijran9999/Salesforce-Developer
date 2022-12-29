@@ -29,7 +29,28 @@ if(op.tasks !=null && op.tasks.size()>0){
 //check if tasks  has 1 record
 //validate
 
-
-
     }
+    public static void validateOppClosed(List<Opportunity> otrnew,List<Opportunity> otrold, map<id, Opportunity> newmapopp, map<id, Opportunity> oldmap) {
+
+set<id> setids = new set<id>();
+for(Opportunity op : otrnew){
+
+if(op.StageName!=oldmap.get(op.id).StageName && (op.StageName=='Closed Won' || op.StageName=='Closed Lost')){
+
+    setids.add(op.id);
+}
+
+
+}
+List<Opportunity> listop = [select id, name, stagename, (select id, status from tasks where status!='Completed'and status !='Deferred') from Opportunity where id in : setids];
+for(Opportunity opp : listop){
+
+if(opp.Tasks !=null || opp.tasks.size()>0){
+   Opportunity s =  newmapopp.get(op.id);
+s.addError('cannot be close ');
+}
+
+}
+
+}
 }

@@ -1,8 +1,68 @@
 trigger OpportunityTrigger2 on Opportunity (before insert,before delete,before update,after insert, after update, after delete, after undelete) {
 //Bir opportunity(insert, update, delete, undelete) nin Amount update edildiğinde bağlı olduğu accountun tüm opportunities nin Amount toplamları Accountun Description kısmına yazılsın.
 
+//turkish revisionun koduud op yaransin amountl bagli olan 
+/*if(trigger.isAfter){
+//yapilan dmlden etkilenen accountlarin idlerini bir set yapida olusturalim. disinda olusdur gloabl olaarq hamsinin icinde istidfade et
+set<id> accids = new set<id>();
+
+    if(trigger.isInsert || trigger.isUndelete){
+for(Opportunity op : trigger.new){
+    if(op.AccountId!=null && op.Amount!=null){//amountu var accauntada bagliysa setin iicne koy
+accids.add(op.AccountId);//bagli oldugu ac id varsa amount d varsa hamsi gelcek setin icine qoya
 
 
+    }
+}
+
+    }
+    if(trigger.isUpdate){
+for(Opportunity opp : trigger.new){
+    if(opp.AccountId !=trigger.oldMap.get(opp.Id).AccountId || opp.Amount!=trigger.oldMap.get(opp.Id).Amount){//eskiyle yeni farkliysa
+accids.add(opp.AccountId);
+accids.add(trigger.oldMap.get(opp.Id).AccountId);
+    }
+
+}
+
+    }
+    if(trigger.isDelete){
+for(Opportunity  oppp : trigger.old){
+    if(oppp.AccountId!=null && oppp.Amount!=null){
+
+        accids.add(oppp.AccountId);
+    }
+}
+    }
+    if(!accids.isEmpty()){
+
+list<account> aclist = [select id, name, description, (select id, name, amount from opportunities) from account where id in : accids];
+for(account ac : aclist){
+
+    Decimal totamnt = 0;
+    for(Opportunity op : ac.Opportunities){
+
+        totamnt+=op.Amount;
+    }
+    ac.Description = 'Bu accounta bagli opportunitylerin amountlari toplami = ' + totamnt;
+}
+
+
+
+
+
+update aclist;
+
+
+
+
+
+
+
+
+
+    }
+}*/
 
 
 

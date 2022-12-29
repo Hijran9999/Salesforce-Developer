@@ -6,8 +6,19 @@ system.debug('ac listesi esittir ' + accList);
 integer recordSAayisi = accList.size();
 return recordSAayisi;
     }
+    public static void dmlInsertDemo_4() {
+        account acc = [select id, name from account where name = 'SoftInnovas Inc.' limit 1];
+
+        //creaet contact
+        contact cnt = new contact();
+        cnt.LastName = 'Biden';
+        cnt.AccountId = acc.id;
+        insert cnt;
+        system.debug('contact record: ' + cnt);
+    }
+
     //accountlardan industry olanlar listelyin enery olanlari contactlari ile beraber liestelyn ve herbiri recordu tek tek yazin
-    public static void AccontWithContacts(string indstry) {
+   /* public static void AccontWithContacts(string indstry) {
         //Accountlardan industry Energy olanlari contactlari ile beraber listeleyin ve her bir recordu tek tek yazin..
         List<Account> accList = [select id, name, (select id, lastName from Contacts) from account where Industry =: indstry];
         System.debug('Account listemiz.. ' + accList);
@@ -38,5 +49,5 @@ system.debug('product name is ' + pl.product2.name);
 }
 
 
-    }
+    }*/
 }

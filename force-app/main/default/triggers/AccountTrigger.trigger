@@ -21,15 +21,15 @@ AccountTriggerHandler.updateBilingCity(Trigger.New, trigger.Old, Trigger.NewMap,
 
 
 
-    /* if(trigger.isAfter && trigger.isUpdate){
+    /*if(trigger.isAfter && trigger.isUpdate){
 
         AccountTriggerHandler.updateVIPContacts1(Trigger.New, Trigger.Old, Trigger.NewMap,Trigger.OldMap);
-    }*/
+    }
 
 
 
     
-/*if(trigger.isBefore){
+if(trigger.isBefore){
 
     AccountTriggerhandler.updateaccountDescription(trigger.new, trigger.old, trigger.newMap,trigger.oldMap);
 }*/

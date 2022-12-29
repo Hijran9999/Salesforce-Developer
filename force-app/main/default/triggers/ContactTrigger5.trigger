@@ -1,16 +1,34 @@
 trigger ContactTrigger5 on Contact (before insert,after insert,before update,after update,after delete, after undelete) {
-/*
-    if(trigger.isBefore && trigger.isInsert){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+   /* if(trigger.isBefore && trigger.isInsert){
         ContacthandlerTurkishrev.contactOtherphone(trigger.new, trigger.old, trigger.newMap, trigger.OldMap);
     }
 
 
 if(trigger.isAfter && trigger.isInsert){
 
-    ContacthandlerTurkishrev.contactOtherPhone1(trigger.new);
-}
+    ContacthandlerTurkishrev.contactOtherPhone2(trigger.new);
+}*/
 
-*/
+
 
 
 

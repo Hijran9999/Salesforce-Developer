@@ -1,24 +1,17 @@
 public class updateAccountTotalCaseCount {
     @invocableMethod
   public static void m1(list<id> listids){
-list<account> lista = [select id, website from account where id in : listids];
+list<account> lista = [select id, website,Description from account where id in : listids];
 for(account ac : lista){
-    ac.Website = 'Google.com';
+    ac.Description = 'Test';
 }
 
 update lista;
 
-  }
+}
   
   
-  
-  
-  
-  
-  
-  
-  
-    /* public static void updateTotalCaseCount(list<ID> listaccountid){
+   /* public static void updateTotalCaseCount(list<ID> listaccountid){
 list<AggregateResult> caseAGR = [select count(Id), accountId from case where accountId in : listaccountid group by accountId];
 
 

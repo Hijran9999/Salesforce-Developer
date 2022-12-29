@@ -1,5 +1,5 @@
 public class SalesforceProjectTriggerHandler {
-    /*public static void createDeafultTicket(list<Salesforce_Project__c> sptriggerNew) {
+    public static void createDeafultTicket(list<Salesforce_Project__c> sptriggerNew) {
 List<Salesforce_Ticket__c> newList = new List<Salesforce_Ticket__c>();
 for(Salesforce_Project__c eachs : sptriggerNew){
 
@@ -20,7 +20,7 @@ if(!newList.isEmpty()){
 
 }
 
-    }*/
+    }
 
    /* public static void createDeafultTicket1(list<Salesforce_Project__c> spTriggernew){
 
@@ -92,5 +92,95 @@ for(Salesforce_Ticket__c eachOfSt : listS){
 }
 }
 
+/*@future
+public static void updateProjectDescription(set<id> ids){
+system.debug('inside future method. okay?');
+list<Salesforce_Project__c> allsp = [select id, description__c from Salesforce_Project__c where id in : ids ];
+for(Salesforce_Project__c eachsp : allsp){
+
+    eachsp.Description__c +='updated from future';
+}
+update allsp;
+}
+
+public static void  spupdate(List<Salesforce_Project__c> sptrnew, list<Salesforce_Project__c> sptrold, Map<Id,Salesforce_Project__c> spnewmap,  map<id,Salesforce_Project__c> oltrmapsp ){
+set<id> spids = new set<id>();
+for(Salesforce_Project__c eacsp : sptrnew){
+    if(eacsp.Status__c=='Completed' && eacsp.Status__c!=oltrmapsp.get(eacsp.id).Status__c){
+
+spids.add(eacsp.id);
 
     }
+}
+if(!spids.isEmpty()){
+    completeAllTickets(spids);
+}
+
+}
+@future
+public static void completeAllTickets(set<id> spids){
+
+
+         //get all tickets which are not completed
+         List<Salesforce_Ticket__c> allST = [select id, status__c, salesforce_project__c from Salesforce_Ticket__c
+         where Salesforce_Project__c in :spIds and status__c != 'Completed'];
+         // set status as completed
+         for (salesforce_ticket__c eachST : allST) {
+             eachST.status__c = 'Completed';
+         }
+         update allST;
+        //update all tickets
+    }*/
+
+@future
+public static void updateProjectDescription(set<id> ids){
+    system.debug('inside future method. okay??');
+List<Salesforce_Project__c> allsps = [select id, description__c from Salesforce_Project__c where id in : ids];
+for(Salesforce_Project__c eachsp : allsps){
+    eachsp.Description__c+='.. See updated from futureeee.. PPayyy Attentionn...';
+
+}
+
+update allsps;
+
+
+}
+public static void spUpdateTicketStatus(List<Salesforce_Project__c> sptrnew, list<Salesforce_Project__c> sptrold, Map<Id,Salesforce_Project__c> spnewmap,  map<id,Salesforce_Project__c> troldmap){
+    //get set id for which project status  is changed to completed..
+//compare old and new
+//call future method to update all its tickets
+//call b
+
+set<id> spids = new set<id>();
+for(Salesforce_Project__c eachsp : sptrnew){
+    Salesforce_Project__c oldsp = troldmap.get(eachSp.id);
+    if(eachsp.Status__c == 'Completed' && eachsp.status__c!=oldsp.status__c){
+        spids.add(eachSp.id);
+
+
+
+    }
+}
+if(!spids.isEmpty()){
+    completeAllTickets(spids);
+}
+}
+//b
+@future
+private static void completeAllTickets(set<id> spids){
+    //get all tickets
+    //set status as completed 
+//update all the tickets..
+
+List<Salesforce_Ticket__c> allst = [select id, status__c, Salesforce_Project__c from Salesforce_Ticket__c where Salesforce_Project__c in : spids and status__c !='Completed'];
+for(Salesforce_Ticket__c    eacst : allst){
+
+    eacst.Status__c = 'Completed';
+}
+update allst;
+}
+}
+
+
+
+
