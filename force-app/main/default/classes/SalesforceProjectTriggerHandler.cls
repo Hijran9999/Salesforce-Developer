@@ -1,6 +1,6 @@
 public class SalesforceProjectTriggerHandler {
     public static void createDeafultTicket(list<Salesforce_Project__c> sptriggerNew) {
-List<Salesforce_Ticket__c> newList = new List<Salesforce_Ticket__c>();
+List<Salesforce_Ticket__c> newList = new List<Salesforce_Ticket__c>();//bos liste
 for(Salesforce_Project__c eachs : sptriggerNew){
 
 
@@ -20,7 +20,7 @@ if(!newList.isEmpty()){
 
 }
 
-    }
+    }//birde yucaridakin
 
    /* public static void createDeafultTicket1(list<Salesforce_Project__c> spTriggernew){
 
@@ -64,7 +64,7 @@ Salesforce_Project__c sppp = spTriggerNewMap.get(spp.Salesforce_Project__c);
 
 
 }*/
-
+//bunu edrsen
 
 public static void validateSpComplete2(List<Salesforce_Project__c>  spTriggernew, List<Salesforce_Project__c> spTriggerOld,map<id,Salesforce_Project__c> spTriggerNewmap, map<id,Salesforce_Project__c> sptriggeroldmap){
 
@@ -86,8 +86,8 @@ for(Salesforce_Ticket__c eachOfSt : listS){
 
 
 
-    Salesforce_Project__c sp = spTriggerNewmap.get(eachOfSt.Salesforce_Project__c);
-    sp.Status__c.addError('cannot complete project becase all tickets are not compleeted');
+    Salesforce_Project__c sp = spTriggerNewmap.get(eachOfSt.Salesforce_Project__c);//??
+    //sp.Status__c.addError('cannot complete project becase all tickets are not compleeted');
 
 }
 }
@@ -132,7 +132,7 @@ public static void completeAllTickets(set<id> spids){
         //update all tickets
     }*/
 
-@future
+/*@future
 public static void updateProjectDescription(set<id> ids){
     system.debug('inside future method. okay??');
 List<Salesforce_Project__c> allsps = [select id, description__c from Salesforce_Project__c where id in : ids];
@@ -178,7 +178,7 @@ for(Salesforce_Ticket__c    eacst : allst){
     eacst.Status__c = 'Completed';
 }
 update allst;
-}
+}*/
 }
 
 

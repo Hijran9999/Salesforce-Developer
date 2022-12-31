@@ -8,7 +8,7 @@ public  class Calculator {
 
     }
 
-    private void printPrivateMessage(){
+   public void printPrivateMessage(){
         system.debug('this is pr');
     }
     public void printNewMessage(string msg){
@@ -18,7 +18,7 @@ public  class Calculator {
 
     public string printAndReturnMsg(string msg2){
         system.debug(msg2);
-        string returnStr = msg2 + ' ok Cool';
+        string returnStr = msg2 + 'cool';
         return returnStr;
     }
     public integer add(integer a, integer b){
@@ -37,8 +37,8 @@ public integer add(integer a, integer b, integer c){
 // param date// return type is boolean
 
 public boolean checkLeapYear(date dt){
-    integer year = dt.year();//built in method
-    boolean lp = date.isLeapYear(year);//isleapyear is also built in method of date class
+  integer year = dt.year();//built in method
+   boolean lp = date.isLeapYear(year);//isleapyear is also built in method of date class
     return lp;
 }
     }
