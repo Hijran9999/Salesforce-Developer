@@ -17,8 +17,8 @@
 
                 for(contact eachCon : cnttriggernew){
                 if(eachcon.LeadSource != triggeroldConMap.get(eachcon.id).LeadSource){
-                
-                eachcon.LeadSource.addError('cannot update lead source do not change ..');
+               string customMsg = system.label.contact_validation2;//adderror fieldidi deyisdirme mesaj kimi
+                eachcon.LeadSource.addError(customMsg);
                 
                 }
                 }
@@ -26,7 +26,7 @@
                 
                 }
         }
-        
+      
         
         
         

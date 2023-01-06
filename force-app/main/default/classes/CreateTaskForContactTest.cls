@@ -46,12 +46,13 @@ system.assertEquals('Email', alt[0].Subject);
  
  //one task for one contact
      }
+     
     @istest
      private static void testOppCreate2(){
         list<contact> lc = [select id, name, lastname from contact];
-        test.startTest();
+        
         CreateTaskForContct.createOpps(lcon);
-        test.stopTest();
+        
         List<Opportunity> alop= [select id, name, contactid from Opportunity where ContactId = : lcon];
         system.assert(alop.size()==10);
      }

@@ -12,3 +12,5 @@ eachcon.Description = triggerOldMap.get(eachcon.id).LastName + ' yeni ile ' + ea
     }
 
 }
+
+

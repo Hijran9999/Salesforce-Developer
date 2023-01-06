@@ -35,4 +35,33 @@ insert lcon;
 insert oplist;
 
 }
+//@future
+public static void updateDescription(set<id> ids){
+List<Opportunity> opplist = [select id, description, accountid, account.description from Opportunity where AccountId in : ids];
+list<contact> conlist = [select id, accountid, description, account.Description    from contact where AccountId in : ids ];
+for(Opportunity op : opplist){
+
+    op.Description = op.Account.Description;
+
 }
+for(contact con : conlist){
+
+    con.Description = con.Account.Description;
+}
+
+update opplist;
+update conlist;
+}
+
+
+}
+
+/*listeleri Al,
+for
+
+FUTURE METHOD
+SORU 1:
+Account objecti'nin description field'inde bir update işlemi
+yapıldığında   o   account'a   bağlı   opportunity   ve   contact'ların
+description   field'lerini   account   description   ile   aynı   olacak   şekilde
+update eden bir "future method" tasarlayınız*/

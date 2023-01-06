@@ -25,12 +25,10 @@ cevab.practiseSeven(52, 1.70);
 
 
 
-
-
 //cevab.printString('Baku', 11);
 /*cevab.practiseFour(-7);
 cevab.practiseFour(47);
 cevab.practiseFour(147);
-cevab.practiseFour(247);
+cevab.practiseFour(247);*/
 
 

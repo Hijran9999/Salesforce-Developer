@@ -16,7 +16,7 @@ if(!tlist.isEmpty()){
     insert tlist;
 }
     }
-    private static void createOpps(list<contact> lcon){
+   public static void createOpps(list<contact> lcon){
 List<Opportunity> listopp = new List<Opportunity>();
 for(contact c : lcon){
     Opportunity op = new Opportunity();

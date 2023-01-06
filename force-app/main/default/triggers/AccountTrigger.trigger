@@ -1,6 +1,32 @@
 trigger AccountTrigger on Account (before insert,before update, after insert,after update) {
  
-   /*if(trigger.isBefore && trigger.isInsert){
+ if(trigger.isAfter && trigger.isUpdate){
+
+    FutureDemo12.updateDesHelper(trigger.new,trigger.oldmap);
+ }
+
+
+
+
+
+ /* if(trigger.isAfter && trigger.isUpdate){
+
+    set<id> ids = new set<id>();
+
+    for(account ac : trigger.new ){
+
+        if(ac.Description!=trigger.oldMap.get(ac.id).Description){
+
+       ids.add(ac.id);
+        }
+    }
+
+    AccountHandlerClassTurkishRevision.updateDescription(ids);
+  }*/
+  
+  
+  
+    /*if(trigger.isBefore && trigger.isInsert){
 
 
     AccountHandlerClassTurkishRevision.method1(trigger.new, trigger.old, trigger.newmap, trigger.oldmap);
@@ -18,7 +44,10 @@ AccountTriggerHandler.updateBilingCity(Trigger.New, trigger.Old, Trigger.NewMap,
    }*/
 
 
-
+/*if(trigger.isAfter && trigger.isInsert){
+    AccountQuebleExample aq= new AccountQuebleExample(trigger.new);
+id jobid = system.enqueueJob(aq);
+}*/
 
 
     /*if(trigger.isAfter && trigger.isUpdate){

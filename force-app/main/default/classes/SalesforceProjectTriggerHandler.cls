@@ -1,28 +1,44 @@
 public class SalesforceProjectTriggerHandler {
     public static void createDeafultTicket(list<Salesforce_Project__c> sptriggerNew) {
-List<Salesforce_Ticket__c> newList = new List<Salesforce_Ticket__c>();//bos liste
-for(Salesforce_Project__c eachs : sptriggerNew){
+try{
+
+    List<Salesforce_Ticket__c> newList = new List<Salesforce_Ticket__c>();//bos liste
+    defaultTicketInfo__c defaultvalues = DefaultTicketInfo__c.getorgDefaults();
+    for(Salesforce_Project__c eachs : sptriggerNew){
+    
+    
+        Salesforce_Ticket__c st = new Salesforce_Ticket__c();
+    st.Subject__c = 'Default ST';
+    st.Salesforce_Project__c = eachs.id;
+    st.Priority__c = 'Medium';
+    st.Description__c = defaultvalues.description__c;
+    newList.add(st);
+    
+    
+    
+    }
+    
+    
+    if(!newList.isEmpty()){
+    
+        insert newList;
+    
+    }
 
 
-    Salesforce_Ticket__c st = new Salesforce_Ticket__c();
-st.Subject__c = 'Default ST';
-st.Salesforce_Project__c = eachs.id;
-newList.add(st);
-
-
-
+}catch(Exception ex){
+    system.debug('ex mesage ' + ex.getMessage());
+for(Salesforce_Project__c eachsp : sptriggerNew){
+    
+    eachsp.addError('contact admins.. error');
+}
 }
 
 
-if(!newList.isEmpty()){
-
-    insert newList;
-
-}
 
     }//birde yucaridakin
 
-   /* public static void createDeafultTicket1(list<Salesforce_Project__c> spTriggernew){
+   public static void createDeafultTicket1(list<Salesforce_Project__c> spTriggernew){
 
 List<Salesforce_Ticket__c> stList1 = new List<Salesforce_Ticket__c>();
 for(Salesforce_Project__c eachSp : spTriggernew){
@@ -63,7 +79,7 @@ Salesforce_Project__c sppp = spTriggerNewMap.get(spp.Salesforce_Project__c);
 
 
 
-}*/
+}
 //bunu edrsen
 
 public static void validateSpComplete2(List<Salesforce_Project__c>  spTriggernew, List<Salesforce_Project__c> spTriggerOld,map<id,Salesforce_Project__c> spTriggerNewmap, map<id,Salesforce_Project__c> sptriggeroldmap){

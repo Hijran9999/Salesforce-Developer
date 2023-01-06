@@ -7,10 +7,13 @@ listac = acs;
 
     }
     public void execute(QueueableContext qc){
+        list<account> s = new list<account>();
         for(account ac : listac){
-            ac.Name+=' == Si';
-
+            account a = new account();
+            a.id = ac.id;
+            a.Name= ac.name + ' == Si';
+            s.add(a);
         }
-        update listac;
+        update s;
     }
 }
