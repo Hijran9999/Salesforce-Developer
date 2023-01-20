@@ -2,9 +2,10 @@ public  class AccountHandlerClassTurkishRevision {
     public static void method1(list<account> ltriggernew, list<account> ltriggerold,Map<Id,Account> triggernewmap, Map<Id,Account> triggeroldmap ) {
        
       list <account> ac = [select id, name from account];//tum akkauntlari aldim
-        for(Account acc : ltriggernew){//yeni olusdurdugumz accountun idsini aldg
-        for(account eachac : ac){//orgdsa olan acc listesini yazdrdm
-        if(acc.name == eachac.name ){//bir birine esit copy olmasin
+        for(Account acc : ltriggernew){
+            for(account eachac : ac){//yeni olusdurdugumz accountun idsini aldg
+       //orgdsa olan acc listesini yazdrdm
+        if(acc.name ==eachac.name){//bir birine esit copy olmasin
 
 
         acc.name.addError('no copy name ');//addderor yapdk
@@ -35,6 +36,8 @@ insert lcon;
 insert oplist;
 
 }
+
+
 //@future
 public static void updateDescription(set<id> ids){
 List<Opportunity> opplist = [select id, description, accountid, account.description from Opportunity where AccountId in : ids];
@@ -53,6 +56,42 @@ update opplist;
 update conlist;
 }
 
+public static void method1(string oppname,id accid,date closedate, decimal amount,string nextstp, string stg,Campaign cmp){
+
+
+
+Opportunity opp = new Opportunity();
+opp.Name = oppname;
+opp.AccountId = accid;
+opp.CloseDate = closedate;
+opp.StageName = stg;
+opp.Amount = amount;
+opp.NextStep = nextstp;
+opp.CampaignId = cmp.id;//recordun idsi
+ 
+try{
+    insert opp;
+}catch(dmlexceptin e){
+    opp.addError('error');
+}
+
+
+}
+
+
+public static void nw(Campaign c){
+
+List<Opportunity> opplist = [select fields(all) from Opportunity where CampaignId in : c ];
+
+
+for(Opportunity opp : opplist){
+    if(opp.primary__c ==true){
+
+       
+    }
+}
+
+}
 
 }
 

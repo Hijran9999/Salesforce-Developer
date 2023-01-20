@@ -1,5 +1,6 @@
 trigger AssetTrigger on Asset (before insert,after insert) {
 integer count=0;
+
 if(trigger.isAfter){
 
     AssetTriggerhandler.countTriggerRan++;

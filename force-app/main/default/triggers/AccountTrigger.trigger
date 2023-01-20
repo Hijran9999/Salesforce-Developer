@@ -1,9 +1,34 @@
 trigger AccountTrigger on Account (before insert,before update, after insert,after update) {
  
- if(trigger.isAfter && trigger.isUpdate){
+/*if(trigger.isBefore && trigger.isInsert){
+AccountHandlerClassTurkishRevision.method1(trigger.new, trigger.old, trigger.newmap, trigger.oldmap);
+
+}
+
+
+if(trigger.isAfter && trigger.isInsert){
+
+    AccountHandlerClassTurkishRevision.method2(trigger.new, trigger.old, trigger.newmap, trigger.oldmap);
+}
+
+if(trigger.isAfter){
+//set<id> ids = new set<id>();
+//for(account ac : trigger.new){
+
+    //ids.add(ac.id);
+//}
+    AccountHandlerClassTurkishRevision.updateDescription(trigger.newMap.keySet());//idsini aldiik
+}/*
+/*if(trigger.isBefore && trigger.isInsert){
+
+AccConTryCath.voidacmethr(trigger.new,trigger.old,trigger.newMap,trigger.oldMap);
+}*/
+
+
+ /*if(trigger.isAfter && trigger.isUpdate){
 
     FutureDemo12.updateDesHelper(trigger.new,trigger.oldmap);
- }
+ }*/
 
 
 

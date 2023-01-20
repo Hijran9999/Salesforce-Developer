@@ -17,3 +17,4 @@ listac = acs;
         update s;
     }
 }
+//zincirleme islemler...

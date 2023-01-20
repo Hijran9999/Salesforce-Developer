@@ -1,5 +1,13 @@
-trigger CaseTrigger on Case (before insert, after insert,before update) {
+trigger CaseTrigger on Case (before insert, after insert,before update,after update) {
 
+if(trigger.isAfter){
+
+    if(trigger.isInsert || trigger.isUpdate){
+        CaseTriggerhandler.printingStatusDetails(trigger.new, trigger.old, trigger.newmap, trigger.oldMap);
+
+    }
+}
+   
 /*if(trigger.isUpdate){
 system.debug('before update trigger run');
 Casetrigger3handler.counnTriggerExc++;
