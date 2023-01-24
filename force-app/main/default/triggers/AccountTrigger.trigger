@@ -1,5 +1,8 @@
 trigger AccountTrigger on Account (before insert,before update, after insert,after update) {
- 
+ if(trigger.isAfter && trigger.isUpdate){
+
+    Acctriggerhandler.method1(trigger.new, trigger.oldmap);
+ }
 /*if(trigger.isBefore && trigger.isInsert){
 AccountHandlerClassTurkishRevision.method1(trigger.new, trigger.old, trigger.newmap, trigger.oldmap);
 

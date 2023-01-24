@@ -1,4 +1,9 @@
 trigger LeadTrigger on Lead (before insert,after insert) {
+  if(trigger.isAfter && trigger.isInsert){
+
+
+    CaseHandlerClassPresizeVitap.createTaskAndCase(trigger.new);
+       }
   
  /* if(trigger.isBefore){
 LeadCreateHandler.updateCloseLostdate(trigger.new, trigger.old, trigger.newmap, trigger.Oldmap);

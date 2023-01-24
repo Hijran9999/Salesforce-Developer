@@ -1,0 +1,1 @@
+OppGameKendikendime.getopp();

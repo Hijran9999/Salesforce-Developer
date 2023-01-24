@@ -1,12 +1,15 @@
 trigger CaseTrigger on Case (before insert, after insert,before update,after update) {
 
-if(trigger.isAfter){
+//if(trigger.isAfter){
 
-    if(trigger.isInsert || trigger.isUpdate){
-        CaseTriggerhandler.printingStatusDetails(trigger.new, trigger.old, trigger.newmap, trigger.oldMap);
+    //if(trigger.isInsert || trigger.isUpdate){
+      //  CaseTriggerhandler.printingStatusDetails(trigger.new, trigger.old, trigger.newmap, trigger.oldMap);
 
-    }
-}
+   // }
+
+
+  
+
    
 /*if(trigger.isUpdate){
 system.debug('before update trigger run');
@@ -69,5 +72,6 @@ if(trigger.isAfter && trigger.isInsert){
     system.debug('after insert trigger called.');
 }
 */
+
 
 }
