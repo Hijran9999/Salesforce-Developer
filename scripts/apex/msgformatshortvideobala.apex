@@ -32,3 +32,4 @@ method- deserialize(jsonstring, apextype)
 </Account>
 Restcalloutsshortvideo27january.getAnimals();
 Restcalloutsshortvideo27january.getUsers();
+RestCallouts1dayinclass.getairlines();

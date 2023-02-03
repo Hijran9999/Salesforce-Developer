@@ -1,5 +1,6 @@
 //jSON : Javascript Object Notation
 //single record
+/*
 {
     "Notation" : "Hijran",
     "Age" : 31,
@@ -29,5 +30,12 @@ list<Account> ac =  [select name, type, industry, annualrevenue from account whe
 string jsonstr = JSON.serialize(ac);
 system.debug(jsonstr);
 
-
+*/
 RestCallouts1dayinclass.getAnimals();
+RestCallouts1dayinclass.getAirlines();
+RestCallouts1dayinclass.getEmployees();
+RestCallouts1dayinclass.getCaseUsingNC();
+
+//RestCallout12Turkishrev2fevral.getUser();
+
+RestCallouts1dayinclass.postAnimal();
