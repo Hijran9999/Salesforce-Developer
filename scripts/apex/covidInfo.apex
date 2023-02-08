@@ -1,0 +1,2 @@
+CoviddInfoHaftasonuasgn.getCovidInfo();
+GetPostInfo.postPost();

@@ -40,4 +40,27 @@ public with sharing class RestCalloutMockTest {
       system.assertEquals('OK', response.getStatus());
     
    }
-} 
+@istest
+   private static void getCaseUsingNCTest(){
+
+      RestCalloutsMock mock = new RestCalloutsMock();
+      test.setMock(HttpCalloutMock.class, mock);
+
+      HttpResponse response = RestCallouts1dayinclass.getCaseUsingNC();
+
+      system.assertEquals(200, response.getStatusCode());
+      system.assertEquals('OK', response.getStatus());
+
+   }
+@istest
+   private static void postAnimalTest(){
+      RestCalloutsMock mock = new RestCalloutsMock();
+      test.setMock(HttpCalloutMock.class, mock);
+
+      HttpResponse response = RestCallouts1dayinclass.postAnimal();
+
+      system.assertEquals(201, response.getStatusCode());
+      system.assertEquals('OK', response.getStatus());
+
+   }
+}

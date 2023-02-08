@@ -28,7 +28,34 @@ return response;
     response.setHeader('Content-Type', 'application/json;charset=UTF-8');
     return response;
    }
+   
+   //else if(request.getEndpoint()=='callout:Nc_dev_Account/services/apexrest/Cases/5004x00000Okf0FAAR' && request.getMethod()=='GET'){
+//case cs = [select id, status, Origin from case where id = '5004x00000Okf0FAAR'];
+//string jsonstring = JSON.serialize(cs);
+
+
+
+    //HttpResponse response = new HttpResponse();
+   // response.setStatusCode(200);
+   // response.setStatus('OK');
+
+//response.setBody(jsonstring);
+//response.setHeader('Content-Type', 'application/json;charset=UTF-8');
+//return response;
+
+  // }
+  else if(request.getEndpoint()=='https://th-apex-http-callout.herokuapp.com/animals' && request.getMethod()=='POST'){
+    HttpResponse response = new HttpResponse();
+    response.setStatusCode(201);
+    response.setStatus('OK');
+    response.setBody('{"animals":["majestic badger","fluffy bunny","scary bear","chicken"]}');
+    response.setHeader('Content-Type', 'application/json;charset=UTF-8');
+    return response;
+
+   }
    return null;
    }
+
+   
 }
      
