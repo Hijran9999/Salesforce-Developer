@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Template Looping : Accounts">
+        <div class="slds-var-m-around_medium">
+            <template for:each={accounts} for:item="Acc">
+                <div key={Acc} class="slds-var-p-bottom_small">
+                    <span style="color: yellow;">{Acc.Name}</span>
+                    {Acc.Type},
+                    {Acc.Industry}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

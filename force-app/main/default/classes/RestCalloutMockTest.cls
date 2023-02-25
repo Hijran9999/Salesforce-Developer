@@ -4,13 +4,13 @@ public with sharing class RestCalloutMockTest {
 
    private static void getAnimalsTest(){
 
-    RestCalloutsMock mock = new RestCalloutsMock();
-    Test.setMock(HttpCalloutMock.class, mock);//methodun 2 inputa ehtiyaci var
+    RestCalloutsMock mock = new RestCalloutsMock();//burda mocku cagr
+    Test.setMock(HttpCalloutMock.class, mock);//methodun 2 inputa ehtiyaci var//bu da kalippp...
     //2interface type instance of the mock class
-  HttpResponse response =  RestCallouts1dayinclass.getAnimals(); 
+  HttpResponse response =  RestCallouts1dayinclass.getAnimals(); //3clas ve method ismi
    //3run asserts
    system.assertEquals(200, response.getStatusCode());
-   system.assertEquals('OK', response.getStatus());
+   system.assertEquals('OK', response.getStatus());//run assertle yoxlama
 
    }
 

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <div class="slds-var-m-around_medium">
+            <lightning-button          
+            variant="brand"
+             label="Show/Hide context" 
+             title="Show/Hide context" 
+              onclick={handleClick}>
+            </lightning-button>
+       </div>
+       <div>
+        <template if:true={showContent}>
+            This content is coming from conditional rendering
+        </template>
+       </div>
+    </lightning-card>
+</template>

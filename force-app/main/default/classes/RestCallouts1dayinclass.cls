@@ -110,6 +110,11 @@ return response;
    EmployeeResponse wrappers = (EmployeeResponse)JSON.deserialize(jsnt, EmployeeResponse.class);//classin menasi json stringi convert 
    //edirem airline o integer falan yazdgmz bu ifade wrapper class 
    //json formatini salesforcun kendi formatina donusturmeli
+
+//datani wrapperse ekletik asshn etdik
+//datadan gelen wrapperler forun icinde dondu aliram her bir recordu her user gelir tek-tek
+//id integer id ona gore stringe verib namein icine qoyduq
+//uzalstirmalar 125-132-ci setirlerde oldu//elemanlarin iceringini olustrb listeye ekledi
       
    list<Employee__c> listem = new list<Employee__c>();
 for(EmployeeResponse.EmployeeWrapper emp : wrappers.data){
@@ -251,7 +256,12 @@ else{
    system.debug('went wrong: ' + response.getBody());
 }
 return response;
+
+
+
 }*/
+
+
 }
 
 

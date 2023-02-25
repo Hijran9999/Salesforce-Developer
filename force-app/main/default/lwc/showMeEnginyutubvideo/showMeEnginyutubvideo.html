@@ -1,0 +1,11 @@
+<template>
+    <lightning-card if:true={status}>
+        <div if:true={status} >Show me when status is true</div>
+        <div if:false={status}>Show me when status is false</div>
+        <div>Show me always</div>
+    </lightning-card>
+    <lightning-card if:true={status}>
+<p> I am a salesforce developer</p>
+
+    </lightning-card>
+</template>

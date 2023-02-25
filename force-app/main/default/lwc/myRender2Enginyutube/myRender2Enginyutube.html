@@ -1,0 +1,36 @@
+<template>
+    <template if:true={display}>
+
+
+<lightning-card title = "Student Information">
+
+    <div>
+<lightning-input label = "First Name" value={Name} onchange={firstNameHandler}></lightning-input>
+<lightning-input label = "Last Name" value={lastName} onchange={lastNameHandler}></lightning-input>
+<lightning-input label = "Grade" value={grade} onchange={gradeHandler}></lightning-input>
+<lightning-input label = "Roll Number" value={rollNumber} onchange={rollNumberhandler}></lightning-input>
+<lightning-button label="Save" onclick={saveButtonHandler}></lightning-button>
+    </div>
+
+
+</lightning-card>
+    </template>
+
+    <template if:false={display}>
+<lightning-card title="Student Information">
+<div>
+    <p style="font-weight:bold" >First Name : {Name}</p>
+    <p style="font-weight:bold">Last Name : {lastName}</p>
+    <p style="font-weight:bold">Grade : {grade}</p>
+    <p style="font-weight:bold">Roll Number : {rollNumber}</p>
+    <img src="https://i.pinimg.com/550x/d2/9d/f2/d29df2c690933b60423b1374586dbf68.jpg">
+    
+    
+
+</div>
+
+</lightning-card>
+
+
+    </template>
+</template>
