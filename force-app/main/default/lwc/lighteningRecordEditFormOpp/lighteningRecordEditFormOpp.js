@@ -1,4 +1,5 @@
 import { LightningElement } from 'lwc';
+import {ShowToastEvent} from 'lightning/platformShowToastEvent';
 import OPP_OBJECT from '@salesforce/schema/Opportunity';
 import ACCOUNT_FIELD from '@salesforce/schema/Opportunity.AccountId';
 import NAME_FIELD from '@salesforce/schema/Opportunity.Name';
@@ -17,4 +18,16 @@ export default class LightningRecordEditFormOpp extends LightningElement {
         amount: AMOUNT_FIELD,
         closeDate: CLOSEDATE_FIELD
     };
+
+    successHandler(){
+        const showtoast= new ShowToastEvent({
+        title:"Success",
+        message:"Saved",
+        variant:"success"
+
+
+});
+
+this.dispatchEvent(showtoast);
+    }
 }

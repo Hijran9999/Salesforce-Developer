@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Get record Contact" icon-name="standard:contact">
+        <div class="slds-var-m-around_medium">
+       
+ <template if:true={contact}>
+            {contact.fields.LastName.value}<br/>
+             {contact.fields.Title.value}<br/>
+             <a href="" target="_blank">{contact.fields.Phone.value }</a><br/>
+             <a href="" target="_blank"> {contact.fields.Email.value}
+             </a>
+            </template>
+       
+        </div>
+    </lightning-card>
+</template>

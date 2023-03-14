@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="Get Record Opportunity" icon-name="standard:opportunity">
+        <div class="slds-var-m-around_medium">
+            <form class="oppform">
+                <lightning-input
+                label="Opportunity Name"
+                type="text"
+                name="Name"
+                value={oppName}
+                onchange={changehandler}>
+                </lightning-input>
+                <lightning-combobox
+                 label="Type"
+                 name="Type"
+                 value={selectedType}
+                 options={typeOptions}
+                onchange={changehandler}>
+            </lightning-combobox>
+                    <lightning-combobox
+                    label="Stage Name"
+                    name="StageName"
+                    options={stageOptions}
+                    onchange={changehandler}>
+                </lightning-combobox>
+          
+          <div class="slds-var-m-around_medium">
+
+            Thanks for choosing the correct information. You have entered.<br/>
+             Opportunity Name : {oppName}<br/>
+             Opportunity Stage : {selectedStage}<br/>
+             Opportunity Type : {selectedType}
+          
+          </div>
+
+ 
+            </form>
+        </div>
+
+
+
+    </lightning-card>
+</template>

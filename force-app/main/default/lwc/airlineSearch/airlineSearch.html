@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Searh Airlines" icon-name="action:fallback">
+
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+            label="Enter a keyword in order to fetching airline record"
+            type="search"
+            onchange={changeHandler}>
+        </lightning-input>
+
+
+        <div class="slds-var-m-top_small">
+            <template if:true={airlines}>
+                <strong> Search results:</strong><br/>
+
+          <template for:each={airlines} for:item="airline">
+            <div key={airline.Id} class="slds-box slds-var-m-bottom_small">
+
+                <strong> {airline.Name__c}</strong><br/>
+                {airline.Country__c}<br/>
+                {airline.Establish__c}<br/>
+                {airline.Logo__c}
+
+            </div>
+          </template>
+            </template>
+            <template if:true={error}>
+
+                <strong>Search Error:</strong><br/>
+                {error}
+            </template>
+
+        </div>
+        </div>
+    </lightning-card>
+</template>
