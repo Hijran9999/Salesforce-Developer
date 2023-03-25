@@ -1,12 +1,15 @@
 trigger AccountTrigger on Account (before insert,before update, after insert,after update) {
 
+    if(trigger.isAfter && trigger.isInsert){
 
-    if(trigger.isUpdate && trigger.isAfter){
+AcHandlerCretaetOpp.createOPP(trigger.new);
+    }
+   /* if(trigger.isUpdate && trigger.isAfter){
 
 
 
         AccountrHandlerBalahocaIntervQues.updateAccAndCasePriority(trigger.new, trigger.old, trigger.oldMap);
-    }
+    }*/
  /*if(trigger.isAfter && trigger.isUpdate){
 
     Acctriggerhandler.method1(trigger.new, trigger.oldmap);

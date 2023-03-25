@@ -1,0 +1,14 @@
+.search-r{
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: aquamarine;
+    color: black;
+    padding: 5px;
+}
+.search-error{
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: aquamarine;
+    color: darkred;
+    padding:5px;
+}

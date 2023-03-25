@@ -25,3 +25,17 @@ h.drive();
  system.debug(' h4 is ' + h4);
  string p15 = h1.rankPrize(9);
  system.debug('p15 is ' + p15);
+
+ list<Book__c> lb = new list<Book__c>();
+       for(integer i=1;i<10; i++){
+         
+        Book__c b = new Book__c();
+        b.Book_Name__c = 'Benjamin' +i;
+        b.Price__c = 500;
+        b.Sayfa_sayisi__c = 600;
+        lb.add(b);
+       }
+       
+       if(!lb.isEmpty()){
+        insert lb;
+       }

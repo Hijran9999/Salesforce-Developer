@@ -141,8 +141,13 @@ if (!accIds.isEmpty()) {
 
 }*/
 
+if(trigger.isAfter &&trigger.isUpdate){
 
+    AcHandlerCretaetOpp.updateTotalAmount(trigger.new);
+  }
+ 
 
+  
 }
 
 

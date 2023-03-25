@@ -1,4 +1,7 @@
-trigger OpportunityTrigger on Opportunity (before insert, after insert, before update,after update) {
+trigger updateAccountIfOppCustomer on Opportunity (after insert, after update) {
+
+
+
         /*list<task> createTask = new list<task>();
             
      for(opportunity opp : trigger.new ) {
@@ -43,13 +46,12 @@ system.debug(' old name is ' + trigger.oldMap.get(eachopp.Id).name + ' amount is
 
    OpportunityHandlerClass2.opportunityStagenameUpdate(trigger.new, trigger.oldmap);
 }*/
+
+
+
+
+
 }
-
-
-
-
-
-
 
 
 
