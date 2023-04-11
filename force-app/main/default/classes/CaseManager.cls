@@ -76,17 +76,13 @@ global static Id putCase(string Id , string Subject, string Description, string 
 @HttpPatch
 global static Case patchCase(){
 
-    restRequest request = RestContext.request;
-    string body = request.requestBody.toString();
+    restRequest request = RestContext.request;//yap requesti
+    string body = request.requestBody.toString();//body dondu stringe
 
-    case cs = (Case)JSON.deserialize(body, case.class);
+    case cs = (Case)JSON.deserialize(body, case.class);//string halinde kullanilmadi diye deserl yap case donustur apexe yani
     update cs;
-    return[select Id, caseNumber, subject,description, Priority,status from case where id =: cs.id limit 1];
+    return[select Id, caseNumber, subject,description, Priority,status from case where id =: cs.id limit 1];//update etduyim cas edin
 
 }
-
-
-
-
 
 }

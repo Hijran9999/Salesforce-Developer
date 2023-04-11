@@ -39,7 +39,7 @@ sp1.Description__c = 'tetss';
 
 list<Salesforce_Project__c> insp = new List<Salesforce_Project__c>{sp1,sp2};
 insert insp;
-Set<Id> setspids = new set<id>{sp1.id,sp2.id};
+Set<Id> setspids = new set<id>{sp1.id,sp2.id};//idler gonderilmeli 
 test.startTest();
 SalesforceProjectTriggerHandler.updateProjectDescription(setspids);
 test.stopTest();

@@ -75,6 +75,7 @@ test.startTest();
 
     RestContext.request = request;
     //3
+    //system.assert(objCase!=null);
     case objCase = CaseManager.getCase();
     system.assertEquals(cs.Id, objCase.Id);
     system.assertEquals(cs.Subject, objCase.Subject);
@@ -104,19 +105,19 @@ private static void patchCaseTest(){
 
     test.startTest();
 
-    case cs = [select Id, subject, description,priority, status from Case limit 1];
+case cs = [select Id, subject, description,priority, status from Case limit 1];
 cs.Priority= 'Medium';
 cs.Status = 'In Progress';
-string body = JSON.serialize(cs);
+string body = JSON.serialize(cs);//jsona cevir
 
-RestRequest request =  new RestRequest();
-request.httpMethod= 'Patch';
-request.requestBody = Blob.valueOf(body);
+RestRequest request =  new RestRequest();//request yap
+request.httpMethod= 'Patch';//methodunu belirle
+request.requestBody = Blob.valueOf(body);//bloba cevir
 RestContext.request = request;
 
-case s = CaseManager.patchCase();
-system.assertEquals('Medium',cs.Priority);
-system.assertEquals('In Progress', cs.Status);
+case s = CaseManager.patchCase();//donan case yokla
+system.assertEquals('Medium',cs.Priority);//field bumu deyistirilen 
+system.assertEquals('In Progress', cs.Status);//update edilen bumu
 
     test.stopTest();
 }

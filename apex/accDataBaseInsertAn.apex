@@ -18,3 +18,21 @@ account ac4 = new account();
         system.debug('error out ' + r.getErrors());
     }
  }
+
+List<Opportunity> hjkd = new List<Opportunity>();
+for(integer i=0;i<3;i++){
+Opportunity n =new Opportunity();
+n.name= 'djfdj' +i;
+n.CloseDate = date.today();
+n.StageName = 'Close Date';
+
+hjkd.add(n);
+}
+try{
+    insert hjkd;
+}
+catch(DmlException ex){
+
+    //create log
+System.debug(ex.getMessage());
+}
